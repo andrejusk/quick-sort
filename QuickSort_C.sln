@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithms", "..\..\..\OneDrive\Documents\_University\c_CS1FC16\Algorithms\Algorithms\Algorithms\Algorithms.vcxproj", "{A00159B6-4015-4431-BCD7-74F57688625C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithms", ".\Algorithms\Algorithms.vcxproj", "{A00159B6-4015-4431-BCD7-74F57688625C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

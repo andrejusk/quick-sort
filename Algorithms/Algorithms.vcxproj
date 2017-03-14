@@ -142,9 +142,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="utilities.h" />
     <ClInclude Include="sort.h" />
     <ClInclude Include="targetver.h" />
