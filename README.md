@@ -1,8 +1,45 @@
 # QuickSortC
-Implements QuickSort in C, tests it for correctness, measures performance and defines totality for the floating point standard.
+Piece of university coursework that implements QuickSort in C, tests it for correctness, measures performance and defines totality for the floating point standard.
+
+## Usage
+Launching the compiled .exe presents the testing menu. From there, the correctness of the algorithm can be tested, such as sorting arrays with varying sizes, handling edge cases (+/-zero, +/-infinity, NaNs with varying mantisas).
+Otherwise, the program can accept command-line variables and execute functions without any further user interation, i.e.
+```powershell
+./Algorithms.exe -s 50                      # Generates and sorts an array of size 50 and closes
+./Algorithms.exe -s 250000 -l 10            # Generates and sorts an array of size 250,000 10 times
+./Algorithms.exe -s 100 -min -100 -max 100  # Generates and sorts 100 elements ranging from -100 to 100
+```
 
 ## Algorithm
 The sorting algorithm uses the Hoare partition scheme and implements a custom comparitor.
+Pseudocode for the quicksort algorithm is as follows:
+```
+algorithm quicksort(array, low, high) 
+    if low < high then 
+        partition := partition(array, low, high) 
+        quicksort(array, low, partition) 
+        quicksort(array, partition + 1, high)
+    end if
+```
+Pseudocode for the Hoare partition scheme is as follows:
+```
+algorithm partition(array, low, high) 
+    pivot := array[low] 
+    i := low – 1 
+    j := high + 1 
+    loop while true 
+        do 
+            i := i + 1 
+        while compareFloat(array[i], pivot) 
+        do 
+            j := j – 1 
+        while compareFloat(pivot, array[j]) 
+        if i >= j then 
+            return j 
+        end if 
+        swap array[i] with array[j] 
+    end loop
+```
 Pseudocode for the comparitor is as follows:
 ```
 algorithm compareFloat(float1, float2) 
